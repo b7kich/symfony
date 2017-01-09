@@ -77,11 +77,6 @@ class ResourceCheckerConfigCache implements ConfigCacheInterface
             return true;
         }
 
-        $metadata = $this->getMetaFile();
-        if (!is_file($metadata)) {
-            return false;
-        }
-
         $e = null;
         $meta = false;
         $time = filemtime($this->file);
